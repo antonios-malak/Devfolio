@@ -59,26 +59,29 @@ a {
   opacity: 90%;
   z-index: 10;
 }
-nav .navbar-nav .nav-item a.nav-link {
+.navbar-nav .nav-item {
+  padding: 5px ;
+}
+
+.navbar-nav .nav-link {
   color: white;
   text-transform: uppercase;
   font-size: 16px;
-  padding: 10px 0 10px 30px;
   font-weight: 600;
   position: relative;
 }
-nav .navbar-nav .nav-item .nav-link::after {
+.navbar .nav-link:not(.dropdown-toggle)::after {
   position: absolute;
   content: "";
   bottom: 0;
-  left: 30px;
-  width: 0;
+  left: 0;
+  width: 0px;
   height: 2px;
   background-color: white;
   transition: 0.5s;
 }
-nav .navbar-nav .nav-item:hover .nav-link::after {
-  width: 50%;
+.navbar .nav-link:not(.dropdown-toggle):hover::after {
+  width: 100%;
 }
 /* end navbar ----------------------------------- */
 /* start hero ---------------- */
